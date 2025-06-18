@@ -288,27 +288,7 @@ def server_error(error):
     return jsonify({'error': 'Internal server error', 'status': 'error'}), 500
 
 """
-Flask Application Server Configuration
-
-This block ensures the Flask application is run directly when the script is executed.
-
-Configuration Details:
-- Debug Mode: Enabled (debug=True)
-    - Provides detailed error logs
-    - Enables auto-reload on code changes
-- Host: '0.0.0.0' 
-    - Makes the server accessible from all network interfaces
-    - Allows connections from other devices on the network
-- Port: 5000 
-    - Default development port
-    - Potential conflicts may occur if port is already in use
-
-Troubleshooting Port Conflicts (macOS):
-1. Check for existing processes using port 5000
-2. Disable AirPlay Receiver in System Preferences
-3. Use an alternative port (e.g., app.run(port=5001))
-
-Note: Not recommended for production deployment
+Flask Application Server Configuration.
 """
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
